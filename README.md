@@ -6,7 +6,7 @@ Here's a list of all hotkeys. You can disable the hotkey you don't want by comme
 1. Spanish characters
     - Accented vowels
         
-        Hotkey | Output w/ dis. CapsLock | Output w/ en. CapsLock
+        Hotkey | Output w/ Shift | Output w/o Shift
         ------------ | ------------- | --------------
         CapsLock + a | á | Á 
         CapsLock + e | é | É
@@ -18,22 +18,19 @@ Here's a list of all hotkeys. You can disable the hotkey you don't want by comme
         RCtrl + i | ì | Ì
         RCtrl + o | ò | Ò
         RCtrl + u | ù | Ù
-        CapsLock + RCtrl + a | ä | Ä 
-        CapsLock + RCtrl + e | ë | Ë
-        CapsLock + RCtrl + i | ï | Ï
-        CapsLock + RCtrl + o | ö | Ö
-        CapsLock + RCtrl + u | ü | Ü
+        RAlt + o | ö | Ö
+        RAlt + u | ü | Ü
     
     - Special consonants
         
-        Hotkey | Output w/ dis. CapsLock | Output w/ en. CapsLock
+        Hotkey | Output w/ Shift | Output w/o Shift
         ------------ | ------------- | --------------
-        CapsLock  +  n | ñ | Ñ
-        CapsLock  + c | ç | Ç
+        RCtrl  +  n | ñ | Ñ
+        RCtrl  + c | ç | Ç
     
     - Other special characters
         
-        Hotkey | Output w/ dis. CapsLock | Output w/ en. CapsLock
+        Hotkey | Output w/ Shift | Output w/o Shift
         ------------ | ------------- | --------------
         CapsLock + l | · | Ŀ
         CapsLock + ? | ¿ | ¿

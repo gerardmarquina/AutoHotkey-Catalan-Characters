@@ -5,15 +5,68 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;
-;;; SPANISH CHARACTERS
+;;; CATALAN CHARACTERS
 ;;;;;;;;;;;;;;;;;;;;;;;;
 
-;;; ACCENTED VOWELS
+;;; ACCENT VOWELS (Accent obert)
+;¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
+; à/À
+RControl & a::
+	if (GetKeyState("Shift","p")=1){
+		Send {Asc 0192}
+	}
+	else{
+		Send {Asc 133}
+	}
+return
+
+; è/È
+RControl & e::
+	if (GetKeyState("Shift","p")=1){
+		Send {Asc 0200}
+	}
+	else{
+		Send {Asc 138}
+	}
+return
+
+; ì/Ì
+RControl & i::
+	if (GetKeyState("Shift","p")=1){
+		Send {Asc 0204}
+	}
+	else{
+		Send {Asc 141}
+	}
+return
+
+; ò/Ò
+RControl & o::
+	if (GetKeyState("Shift","p")=1){
+		Send {Asc 0210}
+	}
+	else{
+		Send {Asc 149}
+	}
+return
+
+; ù/Ù
+RControl & u::
+	if (GetKeyState("Shift","p")=1){
+		Send {Asc 0217}
+	}
+	else{
+		Send {Asc 151}
+	}
+return
+
+;;; ACCENTED VOWELS (Accent tancat)
 ;¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
 
 ; á/Á
 CapsLock & a::
-	if (GetKeyState("CapsLock","t")=1){
+	if (GetKeyState("Shift","p")=1){
 		Send {Asc 160}
 	}
 	else{
@@ -23,7 +76,7 @@ return
 
 ; é/É
 CapsLock & e::
-	if (GetKeyState("CapsLock","t")=1){
+	if (GetKeyState("Shift","p")=0){
 		Send {Asc 130}
 	}
 	else{
@@ -33,7 +86,7 @@ return
 
 ; í/Í
 CapsLock & i::
-	if (GetKeyState("CapsLock","t")=1){
+	if (GetKeyState("Shift","p")=0){
 		Send {Asc 161}
 	}
 	else
@@ -44,7 +97,7 @@ return
 
 ; ó/Ó
 CapsLock & o::
-	if (GetKeyState("CapsLock","t")=1){
+	if (GetKeyState("Shift","p")=0){
 		Send {Asc 162}
 	}
 	else{
@@ -54,7 +107,7 @@ return
 
 ; ú/Ú
 CapsLock & u::
-	if (GetKeyState("CapsLock","t")=1){
+	if (GetKeyState("Shift","p")=0){
 		Send {Asc 163}
 	}
 	else{
@@ -62,33 +115,45 @@ CapsLock & u::
 	}
 return
 
+;;; SPECIAL VOWELS (dièresi)
+;¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+
 ; ü/Ü
->!u::
-	if (GetKeyState("CapsLock","t")=1){
-		Send {Asc 154}
+RAlt & u::
+	if (GetKeyState("Shift","p")=1){
+		Send {U+00DC}
 	}
 	else{
-		Send {Asc 129}
+		Send {U+00FC}
 	}
 return
 
+; ö/Ö
+RAlt & o::
+	if (GetKeyState("Shift","p")=1){
+		Send {U+00D6}
+	}
+	else{
+		Send {U+00F6}
+	}
+return
 
-;;; SPECIAL CONSONANTS
+;;; SPECIAL CONSONANTS ("enya" i "ce" trencada)
 ;¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
 
 ; ñ/Ñ
-CapsLock & n::
-	if (GetKeyState("CapsLock","t")=1){
-		Send {Asc 164}
+RControl & n::
+	if (GetKeyState("Shift","p")=1){
+		Send {Asc 165}
 	}
 	else{
-		Send {Asc 165}
+		Send {Asc 164}
 	}
 return
 
 ; ç/Ç
->!c::
-	if (GetKeyState("CapsLock","t")=1){
+RControl & c::
+	if (GetKeyState("Shift","p")=1){
 		Send {Asc 128}
 	}
 	else{
@@ -110,140 +175,12 @@ CapsLock & !::
 	Send {Asc 173}
 return
 
-; €
->!e::
-	Send {Asc 0128}
-return
-
-; º/ª
-CapsLock & `::
-	if (GetKeyState("CapsLock","t")=1){
-		Send {Asc 167}
+; l·l
+CapsLock & l::
+	if (GetKeyState("Shift","p")=1){
+		Send {U+013F}
 	}
 	else{
-		Send {Asc 166}
+		Send {Asc 250}
 	}
 return
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; ADDITIONAL CHARACTERS
-;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;;; MATHEMATICAL CHARACTERS
-;¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
-
-; ±
-CapsLock & -::
-	Send {Asc 241}
-return
-
-; ÷
-CapsLock & 8::
-	Send {Asc 0247}
-return
-
-; ∞
->!8::
-	Send {Asc 236}
-return
-
-; ∫
->!f::
-	Send {U+222B}
-return
-
-; ≈
-CapsLock & =::
-	Send {Asc 247}
-return
-
-; ≠
->!=::
-	Send {U+2260}
-return
-
-; µ
->!m::
-	Send {Asc 230}
-return
-
-; ∩
->!i::
-	Send {Asc 239}
-return
-
-; √
->!r::
-	Send {Asc 251}
-return
-
-; Σ
->!s::
-	Send {Asc 228}
-return
-
-; ∏
->!p::
-	Send {U+220F}
-return
-
-; π
-CapsLock & p::
-	Send {Asc 227}
-return
-
-; α
->!a::
-	Send {Asc 224}
-return
-
-; ß
->!b::
-	Send {Asc 225}
-return
-
-
-;;; TYPOGRAPHIC CHARACTERS
-;¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
-
-; ↑
-CapsLock & Up::
-	Send {Asc 24}
-return
-
-; ↓
-CapsLock & Down::
-	Send {Asc 25}
-return
-
-; ←
-CapsLock & Left::
-	Send {Asc 27}
-return
-
-; →
-CapsLock & Right::
-	Send {Asc 26}
-return
-
-; «
->!,::
-	Send {Asc 174}
-return
-
-; »
->!.::
-	Send {Asc 175}
-return
-
-; ¯
->!-::
-	Send {Asc 0175}
-return
-
-; …
-CapsLock & .::
-	Send {Asc 0133}
-return 
-
