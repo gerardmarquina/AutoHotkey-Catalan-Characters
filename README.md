@@ -18,6 +18,11 @@ Here's a list of all hotkeys. You can disable the hotkey you don't want by comme
         RCtrl + i | ì | Ì
         RCtrl + o | ò | Ò
         RCtrl + u | ù | Ù
+        CapsLock + RCtrl + a | ä | Ä 
+        CapsLock + RCtrl + e | ë | Ë
+        CapsLock + RCtrl + i | ï | Ï
+        CapsLock + RCtrl + o | ö | Ö
+        CapsLock + RCtrl + u | ü | Ü
     
     - Special consonants
         
@@ -30,5 +35,6 @@ Here's a list of all hotkeys. You can disable the hotkey you don't want by comme
         
         Hotkey | Output w/ dis. CapsLock | Output w/ en. CapsLock
         ------------ | ------------- | --------------
+        CapsLock + l | · | Ŀ
         CapsLock + ? | ¿ | ¿
         CapsLock + ! | ¡ | ¡
