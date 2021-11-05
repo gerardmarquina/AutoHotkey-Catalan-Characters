@@ -3,7 +3,7 @@
 ### Hotkeys
 Here's a list of all hotkeys. You can disable the hotkey you don't want by commenting the code block or erasing it.
 
-1. Spanish characters
+1. Catalan characters
     - Accented vowels
         
         Hotkey | Output w/ Shift | Output w/o Shift
