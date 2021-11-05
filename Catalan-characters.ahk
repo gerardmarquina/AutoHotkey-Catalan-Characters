@@ -66,7 +66,7 @@ return
 
 ; á/Á
 CapsLock & a::
-	if (GetKeyState("Shift","p")=1){
+	if (GetKeyState("Shift","p")=0){
 		Send {Asc 160}
 	}
 	else{
